@@ -1,7 +1,6 @@
 import streamlit as st
-from infrastructure.engine import engine, Base
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 def main():
     auth_page = st.Page("web/controllers/auth_controller.py", url_path="/auth", title="Auth Page", icon="🎈",default=True)
