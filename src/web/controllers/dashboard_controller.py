@@ -1,17 +1,14 @@
-from dependency_injector.wiring import inject, Provide
-from src.application.use_cases.login_user import LoginUserUseCase
-from src.containers import Container, dependency_injector
+import pandas as pd
 from src.web.views.dashboard_view import dashboard_view
 
-@dependency_injector
 class DashboardController:
-
-    @inject
-    def __init__(self):
-        pass
-
     def execute(self):
-        dashboard_view()
+        df = pd.DataFrame({
+            "Dia": pd.date_range(start="2025-05-01", periods=7),
+            "Visitas": [150, 200, 180, 220, 240, 210, 300]
+        })
+
+        dashboard_view(df)
 
 if __name__ == "__main__":
     DashboardController().execute()
