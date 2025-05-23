@@ -1,3 +1,4 @@
+import re
 import streamlit_authenticator as stauth
 from src.domain.repositories.user_repo import IUserRepository
 
@@ -23,4 +24,8 @@ class AuthUseCase:
         credentials = self.get_credentials()
 
         return stauth.Authenticate(
-            credentials, cookie_name="Streamlit", cookie_key="abcdef", cookie_expiry_days=4)
+            credentials,
+            cookie_name="Streamlit",
+            cookie_key="abcdef",
+            cookie_expiry_days=4
+        )
