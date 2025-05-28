@@ -48,5 +48,10 @@ streamlit run app.py
 └── README.md
 </code></pre>
 
+<h2>📷 Prints</h2>
+![img.png](img.png)
+<hr/>
+![img_1.png](img_1.png)
+
 <h2>✅ Status</h2>
 <p>🔧 Em desenvolvimento – sugestões e melhorias são bem-vindas!</p>
