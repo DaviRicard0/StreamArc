@@ -49,9 +49,9 @@ streamlit run app.py
 </code></pre>
 
 <h2>📷 Prints</h2>
-![image](https://github.com/user-attachments/assets/fc44a3ea-1a74-4fc1-9cea-5458cd9bff53)
+<img src="https://github.com/user-attachments/assets/fc44a3ea-1a74-4fc1-9cea-5458cd9bff53"/>
 <hr/>
-![image](https://github.com/user-attachments/assets/5c1b086c-bdc2-4ed1-8450-cb9cd7599938)
+<img src="https://github.com/user-attachments/assets/5c1b086c-bdc2-4ed1-8450-cb9cd7599938"/>
 
 
 <h2>✅ Status</h2>
