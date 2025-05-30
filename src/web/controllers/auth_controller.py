@@ -2,6 +2,7 @@
 # from src.application.use_cases.register_user import RegisterUserUseCase
 
 from src.application.use_cases.auth_case import AuthUseCase
+from src.domain.entities.user import User
 from src.web.views.auth.auth_view import auth_view
 from dependency_injector.wiring import inject, Provide
 from src.containers import Container, dependency_injector
@@ -14,10 +15,14 @@ class AuthController:
         self,
         auth_use_case: AuthUseCase = Provide[Container.auth_use_case]
     ):
-        self.authenticator = auth_use_case.create_authenticator()
+        self.register_user = auth_use_case.register_user
+        self.authenticator = auth_use_case.create_streamlit_authenticator()
+
+    def register_user(self, name: str, email: str, password: str) -> User | None:
+        return self.register_user(name, email, password)
 
     def execute(self):
-        auth_view(self.authenticator)
+        auth_view(self.authenticator, self.register_user)
 
 if __name__ == "__main__":
     AuthController().execute()

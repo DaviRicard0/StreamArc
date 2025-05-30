@@ -1,6 +1,8 @@
 import streamlit as st
 
-# Base.metadata.create_all(bind=engine)
+from src.infrastructure.engine import Base, engine
+
+Base.metadata.create_all(bind=engine)
 
 def main():
     if "logged_in" not in st.session_state:
