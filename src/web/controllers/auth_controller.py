@@ -3,7 +3,7 @@
 
 from src.application.use_cases.auth_case import AuthUseCase
 from src.domain.entities.user import User
-from src.web.views.auth.auth_view import auth_view
+from src.web.views.auth_view import auth_view
 from dependency_injector.wiring import inject, Provide
 from src.containers import Container, dependency_injector
 
